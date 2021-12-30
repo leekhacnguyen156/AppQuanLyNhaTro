@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Activity.Thutien.TaoHD">
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarTaoHoadon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackTaoHoadon"
+                    android:background="@android:color/transparent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24_dart"
+                    />
+
+                <TextView
+                    android:layout_toRightOf="@id/btnBackTaoHoadon"
+                    android:layout_marginStart="10dp"
+                    android:text="Tạo hóa đơn"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_below="@id/toolbarTaoHoadon"
+            android:layout_marginStart="10dp"
+            android:id="@+id/txtThongtinPhongTao"
+            android:text="Phòng 1 ( 1-2020 )"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <LinearLayout
+            android:layout_below="@id/txtThongtinPhongTao"
+            android:weightSum="2.1"
+            android:id="@+id/lnlay"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtTP"
+                    android:text="Tiền phòng"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTP"
+                    android:id="@+id/txtDGTP"
+                    android:text="Đơn giá"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTP"
+                    android:inputType="number"
+                    android:id="@+id/edtTienPhongHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTD"
+                    android:text="Tiền điện"
+                    android:layout_below="@id/edtTienPhongHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtDGTD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTD"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Đơn giá"
+                    android:textColor="@color/textMain"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:layout_below="@id/txtDGTD"
+                    android:inputType="number"
+                    android:id="@+id/edtTienDienHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTN"
+                    android:text="Tiền nước"
+                    android:layout_below="@id/edtTienDienHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTN"
+                    android:id="@+id/txtDGTN"
+                    android:text="Đơn giá"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTN"
+                    android:inputType="number"
+                    android:id="@+id/edtTienNuocHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTPS"
+                    android:text="Tiền phát sinh"
+                    android:layout_below="@id/edtTienNuocHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTPS"
+                    android:id="@+id/txtDGTPS"
+                    android:text="Đơn giá"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTPS"
+                    android:inputType="number"
+                    android:id="@+id/edtTienPhatSinhHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtTPR"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTPR"
+                    android:id="@+id/txtDGTPR"
+                    android:text="Số lượng"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTPR"
+                    android:inputType="number"
+                    android:id="@+id/edtSoLuongPhongHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTDR"
+                    android:text=""
+                    android:layout_below="@id/edtSoLuongPhongHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtDGTDR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtTDR"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Số lượng"
+                    android:textColor="@color/textMain"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:layout_below="@id/txtDGTDR"
+                    android:inputType="number"
+                    android:id="@+id/edtSoLuongDienHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTNR"
+                    android:text=""
+                    android:layout_below="@id/edtSoLuongDienHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTNR"
+                    android:id="@+id/txtDGTNR"
+                    android:text="Số lượng"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTNR"
+                    android:inputType="number"
+                    android:id="@+id/edtSoLuongNuocHD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtTPSR"
+                    android:text=""
+                    android:layout_below="@id/edtSoLuongNuocHD"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_below="@id/txtTPSR"
+                    android:id="@+id/txtDGTPSR"
+                    android:text="Số lượng"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="@color/textMain"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_below="@id/txtDGTPSR"
+                    android:inputType="number"
+                    android:id="@+id/edtSoTienPhatSinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="serif"
+                    android:text=""
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtGhiChu"
+            android:text="Ghi chú"
+            android:layout_below="@id/lnlay"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:fontFamily="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_below="@id/txtGhiChu"
+            android:inputType="text"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/edtGhichu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="serif"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnCreateHD"
+            android:layout_below="@id/edtGhichu"
+            android:layout_marginTop="20dp"
+            android:text="Tạo hóa đơn"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:background="@drawable/custom_icon_new"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</ScrollView>

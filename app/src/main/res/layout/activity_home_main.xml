@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeMain">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_shape_toobar"
+        android:minHeight="?attr/actionBarSize"
+        app:title=" ">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/txtTenNhaTroMain"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="5dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/textMainLight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/iconmotelmain" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <GridView
+        android:id="@+id/gridViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarMain"
+        android:layout_marginTop="1dp"
+        android:numColumns="2" />
+
+</RelativeLayout>

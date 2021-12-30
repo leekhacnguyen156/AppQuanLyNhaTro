@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Activity.ThueTraPhong.ThueTraPhong">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarThuetra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBackThuetra"
+                android:background="@android:color/transparent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/btnBackThuetra"
+                android:layout_marginStart="10dp"
+                android:text="Thuê/trả phòng"
+                android:textStyle="bold"
+                android:id="@+id/tenthuephong"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="#C6FFFFFF"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchTTP"
+                android:layout_centerHorizontal="true"
+                app:queryHint="Tìm kiếm"
+                app:iconifiedByDefault="false"
+                android:layout_below="@id/tenthuephong"
+                android:layout_marginStart="10dp"
+                app:searchIcon="@drawable/ic_baseline_search_24"
+                app:closeIcon="@drawable/ic_baseline_close_24"
+                android:theme="@style/SearchAutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_below="@id/toolbarThuetra"
+        android:id="@+id/tabLayoutTT"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerTT"
+        android:layout_below="@id/tabLayoutTT"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

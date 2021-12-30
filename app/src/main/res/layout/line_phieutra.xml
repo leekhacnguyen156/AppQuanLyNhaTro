@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewPhieutra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgPhieutra"
+                android:layout_centerVertical="true"
+                android:src="@drawable/file"
+                android:scaleType="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/imgPhieutra"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtTenKhachtra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="serif"
+                    android:gravity="start|center"
+                    android:maxLines="1"
+                    android:padding="1dp"
+                    android:singleLine="true"
+                    android:text="Khách 1"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/textMain"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/txtNgaytra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_below="@id/txtTenKhachtra"
+                    android:fontFamily="serif"
+                    android:gravity="start|center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="01-01-2020"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

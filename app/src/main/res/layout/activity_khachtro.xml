@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".Activity.Khachtro.KhachtroActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarKhachtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBackKhachtro"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <ImageButton
+                android:id="@+id/btnSaveKhachtro"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_check_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/btnBackKhachtro"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Thông tin khách trọ"
+                android:textColor="#C6FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBackKhachtro"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="Tên khách trọ"
+                    android:textColor="#D0000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTenTro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="serif"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Nguyễn Gia Khang"
+                    android:textColor="#C6FFFFFF"
+                    android:textColorHint="#C6FFFFFF"
+                    android:textCursorDrawable="@null"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/listviewTongQuat"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarKhachtro" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Tất cả"
+        android:id="@+id/menuAll"
+        android:icon="@drawable/all"/>
+
+    <item
+        android:title="Theo tháng"
+        android:id="@+id/menuMonth"
+        android:icon="@drawable/month"/>
+
+    <item
+        android:title="Theo năm"
+        android:id="@+id/menuYear"
+        android:icon="@drawable/year"/>
+
+</menu>

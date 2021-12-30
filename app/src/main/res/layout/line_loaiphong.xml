@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewDSLP"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/layoutRLLoaiphong"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageLoaiphong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/typeroom" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/imageLoaiphong">
+
+                <TextView
+                    android:id="@+id/txtTenLoaiphong"
+                    android:text="Phòng vip"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textMain"
+                    android:textSize="20sp"
+                    android:fontFamily="serif"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtGiaLoaiphong"
+                    android:text="1.000.000 đ"
+                    android:layout_below="@id/txtTenLoaiphong"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="serif"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnDeleteLoaiphong"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/delete"
+                android:layout_centerVertical="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

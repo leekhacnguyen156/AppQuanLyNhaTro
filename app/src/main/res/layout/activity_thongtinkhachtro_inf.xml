@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Khachtro.ThongtinkhachtroInf">
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarInfKhachtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:minHeight="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackInfKhachtro"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                <ImageButton
+                    android:id="@+id/btnSaveInfKhachtro"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_check_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toRightOf="@id/btnBackInfKhachtro"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Thông tin khách trọ"
+                    android:textColor="#C6FFFFFF"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnBackInfKhachtro"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="serif"
+                        android:text="Tên khách trọ"
+                        android:textColor="@color/textMain"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editTenKhachtroInf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="serif"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:maxLength="200"
+                        android:textColor="@color/textMainLight"
+                        android:textColorHint="@color/textMainLight"
+                        android:textCursorDrawable="@null"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_below="@id/toolbarInfKhachtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/idPhongtro"
+                android:text="Phòng trọ:"
+                android:gravity="center"
+                android:textColor="@color/textMain"
+                android:textSize="15sp"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinnerPhongtroInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idPhongtro"
+                android:layout_marginTop="10dp"
+                android:theme="@style/spinner" />
+
+            <TextView
+                android:id="@+id/txtQuequanInf"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/textMain"
+                android:text="Quê quán:"
+                android:layout_below="@id/spinnerPhongtroInf"
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtQuequanInf"
+                android:textColor="@color/textMain"
+                android:fontFamily="serif"
+                android:textSize="20sp"
+                android:maxLength="250"
+                android:inputType="text"
+                android:layout_below="@id/txtQuequanInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtCmndInf"
+                android:textSize="15sp"
+                android:textColor="@color/textMain"
+                android:layout_below="@id/edtQuequanInf"
+                android:layout_marginTop="10dp"
+                android:text="Số CMND: "
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtCmndInf"
+                android:textColor="@color/textMain"
+                android:fontFamily="serif"
+                android:textSize="20sp"
+                android:maxLength="12"
+                android:inputType="number"
+                android:layout_below="@id/txtCmndInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtSdtInf"
+                android:textSize="15sp"
+                android:textColor="@color/textMain"
+                android:layout_below="@id/edtCmndInf"
+                android:layout_marginTop="10dp"
+                android:text="Số điện thoại:"
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtSdtInf"
+                android:textColor="@color/textMain"
+                android:fontFamily="serif"
+                android:textSize="20sp"
+                android:inputType="number"
+                android:maxLength="11"
+                android:layout_below="@id/txtSdtInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/idCalendar"
+                android:text="Ngày sinh:"
+                android:textColor="@color/textMain"
+                android:textSize="15sp"
+                android:fontFamily="serif"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/edtSdtInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edtNgaysinhInf"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:textSize="15sp"
+                android:inputType="date"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/idCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:id="@+id/layoutGioitinh"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/edtNgaysinhInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/idGioitinh"
+                    android:text="Giới tính:"
+                    android:textColor="@color/textMain"
+                    android:textSize="15sp"
+                    android:fontFamily="serif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/idGioitinh"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radiobtnNam"
+                        android:fontFamily="serif"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Nam"
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@id/radiobtnNu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:textColor="@color/colorPrimaryDark"
+                        android:fontFamily="serif"
+                        android:textSize="15sp"
+                        android:text="Nữ"
+                        android:id="@+id/radiobtnNu"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/AvtProfile"
+                android:layout_below="@id/layoutGioitinh"
+                android:src="@drawable/addphoto"
+                android:scaleType="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnTraphongkhachhangInf"
+                android:fontFamily="serif"
+                android:textColor="#00A128"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:text="Trả phòng trọ"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/AvtProfile"
+                android:background="@drawable/custom_shape_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

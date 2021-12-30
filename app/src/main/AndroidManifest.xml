@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quanlynhatro">
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconapp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.Thutien.HoadonEdit"></activity>
+        <activity android:name=".Activity.Thutien.FragmentHoadon.HoaDonView" />
+        <activity android:name=".Activity.Thutien.TaoHD" />
+        <activity android:name=".Activity.ThueTraPhong.ThueTraPhong" />
+        <activity android:name=".Activity.Thongke.Thongke" />
+        <activity android:name=".Activity.Thutien.HoadonThutien" />
+        <activity android:name=".Activity.Loaiphong.LoaiphongActivity" />
+        <activity android:name=".Activity.Phongtro.Thongtinphongtro" />
+        <activity android:name=".Activity.Phongtro.DanhsachPhongtro" />
+        <activity android:name=".Activity.Nhatro.ThongtinnhatroInf" />
+        <activity android:name=".Activity.TaoNhatro.Thietlaploaiphong" />
+        <activity android:name=".Activity.TaoNhatro.Themtro" />
+        <activity android:name=".Activity.HomeMain" />
+        <activity android:name=".Activity.Loaiphong.DanhsachLoaiphong" />
+        <activity android:name=".Activity.Nhatro.DanhsachNhatro" />
+        <activity android:name=".Activity.Khachtro.DanhsachKhachtro" />
+        <activity android:name=".Activity.Nhatro.NhatroActivity" />
+        <activity android:name=".Activity.Khachtro.ThongtinkhachtroInf" />
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

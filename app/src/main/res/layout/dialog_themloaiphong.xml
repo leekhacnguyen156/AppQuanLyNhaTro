@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutThem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtdialogThemLoai"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:text="Thêm loại phòng"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/idten"
+                android:layout_below="@id/txtdialogThemLoai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Tên loại phòng:"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:textColor="@color/textMain"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edtTenLoaiphongThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idten"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:fontFamily="serif"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/idgialoaiphong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtTenLoaiphongThem"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Giá loai phòng:"
+                android:textColor="@color/textMain"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edtGialoaiphongThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idgialoaiphong"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutThem"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2.05">
+
+            <Button
+                android:id="@+id/btnHuythemloaiphong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_shape_cardview"
+                android:fontFamily="serif"
+                android:text="Hủy"
+                android:textColor="#F44336"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_weight="0.05"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnOkthemloaiphong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_shape_cardview"
+                android:fontFamily="serif"
+                android:text="Thêm"
+                android:textColor="#F44336"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

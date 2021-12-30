@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TaoNhatro.Themtro">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarThemNhatro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:titleTextColor="@color/textMainLight"
+        app:title=" ">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/btnHuythemtro"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_toEndOf="@id/btnHuythemtro"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textColor="@color/textMainLight"
+                android:textSize="20sp"
+                android:text="Tạo thông tin nhà trọ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/btnOkthemtro"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_check_24"
+                android:background="@android:color/transparent"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:background="@drawable/custom_shape_total_main"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:id="@+id/phantramtaotro"
+        android:layout_below="@id/toolbarThemNhatro"
+        android:text="1/2"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_below="@id/phantramtaotro"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutThem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/idten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Tên nhà trọ:"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:textColor="@color/textMain"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edtTentroThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idten"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:fontFamily="serif"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/iddiachi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtTentroThem"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Địa chỉ:"
+                android:textColor="@color/textMain"
+                android:textSize="15sp" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtDiachitroThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iddiachi"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/idgiadien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtDiachitroThem"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Giá điện: (vnđ/kWh)"
+                android:textColor="@color/textMain"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edtGiadienThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idgiadien"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/idgianuoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtGiadienThem"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/password"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Giá nước: (vnđ/m³)"
+                android:textColor="@color/textMain"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edtGianuocThem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idgianuoc"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="serif"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
